@@ -3,7 +3,7 @@ layout: post
 title: "markdown template"
 use_math: true
 tags: notes
-desc: This blog article displays the road map for me to set up a website by github pages
+desc: This blog article displays the road map for me to write documents by github pages.
 ---
 
 <br>
