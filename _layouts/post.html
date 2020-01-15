@@ -1,0 +1,70 @@
+---
+layout: default
+---
+{% assign post = page %}
+<main class="container">
+    <br>
+    <article class="markdown-body">
+                <h1>{{ post.title }}</h1>
+                <small>
+                {{ post.date | date: "%B %-d, %Y" }}<br>
+                {% if post.tags %} tags: {% endif %} {% for tag in post.tags %} {{ tag }} {% endfor %}
+                </small>
+                <p>{{ content }}</p>
+    </article>
+                <br><br>
+                <div id="vssue"></div>
+</main>
+
+<script type="text/x-mathjax-config">
+    var mathId = document.getElementById("post-container");
+    MathJax.Hub.Config({
+        showProcessingMessages: false,
+        messageStyle: "none",
+        extensions: ["tex2jax.js"],
+        jax: ["input/TeX", "output/HTML-CSS"],
+        tex2jax: {
+            inlineMath:  [ ["$", "$"] ],
+            displayMath: [ ["$$","$$"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre','code','a'],
+            ignoreClass:"comment-content"
+        },
+        "HTML-CSS": {
+            availableFonts: ["STIX","TeX"],
+            showMathMenu: false
+        }
+    });
+    MathJax.Hub.Queue(["Typeset",MathJax.Hub,mathId]);
+</script>
+<script src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+<!-- vue runtime build (runtime only)  -->
+<script src="https://unpkg.com/vue/dist/vue.runtime.min.js"></script>
+
+<!-- Vssue Github build -->
+<script src="https://unpkg.com/vssue/dist/vssue.github.min.js"></script>
+
+<!-- use render function for vue runtime build -->
+<script>
+    new Vue({
+      el: '#vssue',
+
+      render: h => h('Vssue', {
+        props: {
+          // here set the title of issue of current page
+          title: '{{ post.date | date: "%B %-d, %Y" }} - Comments',
+
+          // here set the options for your OAuth App
+          // My OAuth App: https://github.com/settings/applications/1194033
+          options: {
+            owner: 'zhuanglinsheng',
+            repo: 'zhuanglinsheng.github.io',
+            clientId: '63efc892bd9cd17962b0',
+            clientSecret: 'f1a5baa5874fc7c60a17ab955220fde08a39f6ce', 
+          },
+        }
+      })
+    })
+</script>

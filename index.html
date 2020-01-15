@@ -1,0 +1,50 @@
+---
+layout: default
+---
+<main class="container">
+<div class="row">
+
+    <div class="col-2">
+      <h1>{{ site.title }}</h1>
+      <p class="lead">
+          <br/>{{ site.desc }}
+          <br/>{{ site.email }}
+      </p>
+      <br><br>
+      {% for post in paginator.posts %}
+        <a href="{{ post.url }}" style="font-size=1.5em">{{ post.title }}</a><br>
+        <small>{{ post.date | date: "%B %-d, %Y" }}</small>
+        <p>{{  post.desc }}</p>
+        <br>
+        {% endfor %}
+        <div class="buttons">
+            {% if paginator.previous_page %}
+            <span class="button">
+                <a href="{{ paginator.previous_page_path }}">[ <- Previous ] </a>
+            </span>
+            {% else %}
+            {% endif %}
+            {% if paginator.next_page %}
+            <span class="button">
+                <a href="{{ paginator.next_page_path }}">[ Next -> ]</a>
+            </span>
+            {% else %}
+            {% endif %}
+        </div>
+    </div>
+
+    <div class="col-1">
+    <div class="side-board">
+        <img class="about" src="{{ site.image }}"
+                    alt="Clark"/>
+        <p class="lead">{{ site.about }}</p>
+    </div>
+    <br>
+    Links:<br>
+    <a href="{{ site.baseurl }}/res/resources.html">Academic Resources</a><br>
+    <a href="{{ site.baseurl }}/res/researchers.html">Researchers</a>
+    </div>
+
+</div>
+</main>
+<br><br><br>

@@ -1,0 +1,11 @@
+_site/
+.sass-cache/
+.jekyll-metadata
+res/books/
+res/drafts/
+res/mylectures/
+res/notebook/.ipynb_checkpoints/
+res/cv/cv.log
+res/cv/cv.synctex.gz
+res/cv/cv.tex
+res/cv/res.cls
