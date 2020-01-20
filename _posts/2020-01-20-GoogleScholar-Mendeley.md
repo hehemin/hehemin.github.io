@@ -8,50 +8,19 @@ desc: This blog article tells me how to export google scholar library into mende
 
 <br>
 
-## This is second level title.
+This is a hyperlink to [Mendeley: Importing References](https://resources.library.lemoyne.edu/mendeley/importing-references/google-scholar). 
 
-#### This is forth level title.
+# Manual Export Method
 
-## Table
+## In Google Scholar Library:
 
-| id |  name |
-|--|--|
-| 001 |  Jonathan |
-| 002 |   Mike    |
+1. Run a search on your topic in Google Scholar, star them to your library.
+2. Select the references in your google library, click the "export" button and choose the "RefMan" link. It's better to save the files in a particular folder.
 
-## Math
+## In Mendeley Library
 
-This is inline mathematical expression $x_t$.
+If you are cooperating a paper with others, it's better to set up a private group.
 
-This is inter-line mathematical expression
-
-$$
-  x= \frac{1}{2}  
-  \tag{1}
-$$
-
-## Code
-
-This is inline code `import()`.
-
-This is inter-line codes
-
-```{python}
-import numpy as np
-```
-
-## Hyperlink
-
-This is a hyperlink to [baidu](www.baidu.com). 
-
-This is a hyperlink to this [blog article](hehemin.github.io/2020/01/05/MARKDOWN-TEMPLATE.html).
-
-## Picture
-
-This is my portrait 
-
-![Me](../res/HHM.jpg)
-
-
-
-
+1. In your group library, click the "Add" button on the left-top. Select "Add folder" and "import RIS(.ris)".
+2. Browse your computer for the particular folder that you saved from Google Scholar.
+3. Click "OK" button.
